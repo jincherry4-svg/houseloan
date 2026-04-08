@@ -1,12 +1,20 @@
 namespace houseloan
 {
-    public partial class houseloan : Form
+    public partial class Houseloan : Form
     {
-        public houseloan()
+        public Houseloan()
         {
             InitializeComponent();
         }
-
+        private void Houseloan_Load_1(object sender, EventArgs e)
+        {
+            grpInput.BackColor = Color.FromArgb(150, 255, 255, 255);
+            grpoutput.BackColor = Color.FromArgb(150, 255, 255, 255);
+        }
+        private void lblfirstprice_Click(object sender, EventArgs e)
+        {
+            // 這裡故意留空，只是為了讓編譯器找到它，不報錯。
+        }
         private void btncount_Click(object sender, EventArgs e)
         {
             try
@@ -87,6 +95,11 @@ namespace houseloan
             {
                 MessageBox.Show("請輸入正確的數字格式，並確認欄位皆已填寫。", "提示");
             }
+        }
+
+        private void lblpriceperm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
